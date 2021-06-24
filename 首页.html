@@ -1,0 +1,434 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <title>北京景点首页</title>
+    <style>
+        .header-carousel-item{
+            height:450px
+        }
+        .bg-cover{
+            background-size: cover;
+            background-position: center center;
+        }
+        .carousel-caption{
+            background-color: rgba(0, 0,0, .6);
+        }
+
+     </style>
+  </head>
+
+
+  <body style="background-color: #fdf3f3">
+<!-- 灰色的底预针放入社群Icons -->
+    <!-- <div class="bg-secondary py-2"> -->
+      <!-- 限定范围container text-right移至最右 -->
+      <!-- <div class="container text-right">
+        <a href="#" class="text-white"><i class="fab fa-weibo"></i></a>
+        <a href="#" class="text-white"><i class="fab fa-facebook-square"></i></a>
+      </div>
+    </div> -->
+    <!-- navbar -->
+    <!-- Color schemes navbar-light bg-light更换navbar-dark bg-dark -->
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #fcecec;">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+            <img src="http://r1.visitbeijing.com.cn/images/8024e33c8651291668d974051b6a7093.png">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+    
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav mr-auto">
+            <!-- <h4>
+            <li class="nav-item active">
+              <a class="nav-link" href="#">首页 <span class="sr-only">(current)</span></a>
+            </li>
+            </h4> -->
+
+            <li class="nav-item dropdown">
+            <h6>
+              <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+               aria-haspopup="true" aria-expanded="false">文化北京
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">古都文化</a>
+                <a class="dropdown-item" href="#">京味文化</a>
+                <a class="dropdown-item" href="#">红色文化</a>
+                <a class="dropdown-item" href="#">创新文化</a>
+                <a class="dropdown-item" href="#">特色文化</a>
+              </div>
+            </h6>
+            </li>
+
+            <li class="nav-item dropdown">
+            <h6>
+              <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+               aria-haspopup="true" aria-expanded="false">畅游北京
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">游玩</a>
+                <a class="dropdown-item" href="#">美食</a>
+                <a class="dropdown-item" href="#">住宿</a>
+                <a class="dropdown-item" href="#">购物</a>
+                <a class="dropdown-item" href="#">旅游地图</a>
+                <a class="dropdown-item" href="#">周未去哪玩</a>
+                <a class="dropdown-item" href="#">民宿大全</a>
+              </div>
+            </h6>
+            </li>
+
+            <li class="nav-item dropdown">
+            <h6>
+              <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+               aria-haspopup="true" aria-expanded="false">特色主题游
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">古都文化游</a>
+                <a class="dropdown-item" href="#">长城游</a>
+                <a class="dropdown-item" href="#">休闲度假游</a>
+                <a class="dropdown-item" href="#">红色旅游</a>
+                <a class="dropdown-item" href="#">文创艺术游</a>
+                <a class="dropdown-item" href="#">体育游</a>
+                <a class="dropdown-item" href="#">科教游</a>
+              </div>
+            </h6>
+            </li>
+
+            <li class="nav-item dropdown">
+            <h6>
+              <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+               aria-haspopup="true" aria-expanded="false">视角北京
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">图片</a>
+                <a class="dropdown-item" href="#">视频</a>
+              </div>
+            </h6>
+            </li>
+
+            <li class="nav-item dropdown">
+            <h6>
+              <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+               aria-haspopup="true" aria-expanded="false">互动咨询
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">电子政务网</a>
+                <a class="dropdown-item" href="#">咨询站</a>
+              </div>
+            </h6>
+            </li>
+
+          </ul>
+
+          <form class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+
+
+          <!-- 建立搜寻栏form-inline -->
+          <!-- <form class="form-inline my-2 my-lg-0"> -->
+            <!-- 使用按钮取代原本navbar -->
+            <!-- <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button> -->
+            <!-- <a href="" class="btn btn-primay">登入</a>
+            <a href="" class="btn btn-primay">注册</a>
+          </form> -->
+        </div>
+      </div>
+    </nav>
+
+
+    <!-- 轮播carousel with indicators -->
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+        <!-- 元件要做调整但不是要修改元件header carousel-item style内调整 -->
+        <div class="carousel-item header-carousel-item  bg-cover active"
+        style="background-image: url(http://m1-1253159997.image.myqcloud.com/nDxXjkUPy20OFBpRAUuZl26G.jpg?imageView2/2/w/940/rq/80);">
+        <!-- <div class="carousel-caption d-none d-md-block px-3">
+            <h3>一個人，田野間的輕鬆美味</h3>
+            <p>城小中假上問，洲元化究變快歡專，臺正機上色從多空放我。來來中的來落行間我海府子成隨上事女，的石在朋經以定空他；級病期他，會性前集一於得當院應對分！意斯能己水成神錢。</p>
+        </div> -->
+        </div>
+
+        <div class="carousel-item header-carousel-item  bg-cover "
+        style="background-image: url(http://m1-1253159997.image.myqcloud.com/eLQu2isXJw8CHadZ24JneK9N.jpg?imageView2/2/w/940/rq/80);">
+        <div class="carousel-caption d-none d-md-block">
+          <p>古都红墙映心暖，六月清风捎安康</p>
+        </div>
+        </div>
+
+        <div class="carousel-item header-carousel-item bg-cover "
+        style="background-image: url(http://m1-1253159997.image.myqcloud.com/0s7uWzNzx6iNCI-lAGrAnp3A.jpg?imageView2/2/w/940/rq/80);">
+        <div class="carousel-caption d-none d-md-block">
+          <h3>美得射人心魂</h3>
+          <p>免费无预约！紫色花海美翻天，被遗忘的京城...</p>
+        </div>
+        
+      </div>
+    </div>
+    </div>
+
+
+    <div class="container my-2 col-12" >
+      <div class="row">
+          <div class="col-4">
+              <div class="mb-2 text-secondary"><img src="https://m1-1253159997.image.myqcloud.com/image/ebc6869fe61bf6b74731813cf2347eb2c5.jpg" class="card-img-top" alt="1"></div>
+              <p></p>
+              <h3 style="text-align:center;color:#915252">红色文化</h3>
+              <p></p>
+              <p style="color:#635f56">我爱北京天安门爱国情怀之旅：天安门广场升旗—毛主席纪念。</p>
+              <p></p>
+          </div>
+          <div class="col-4">
+            <div class="mb-2"><img src="https://m1-1253159997.image.myqcloud.com/image/1a58e7b491202394e2f2f0d5fac90898c5.jpg" class="card-img-top" alt="2"></div>
+            </p></p>
+              <h3 style="text-align:center; color:#915252 ">京味文化</h3>
+            </p></p>
+              <p style="color:#635f56">老舍在北京三处题过匾，最出名的是仿膳，另一处与新凤霞有关。</p>
+              <p></p>
+          </div>
+          <div class="col-4">
+            <div class="mb-2"><img src="https://m1-1253159997.image.myqcloud.com/image/c0b8b42894b0f0818a3f0d5e310d0408c5.jpg" class="card-img-top" alt="3"></div>
+            <p></p><p></p>
+            <h3 style="text-align:center; color:#915252">创新文化</h3>
+          </p></p>
+              <p style="color:#635f56">世界海洋日北京海洋馆推出大型沉浸式亲子互动剧。</p>
+              <p></p>
+          </div>
+      </div>
+    </div>
+
+    <section class="container-fluid py-9 text-white" style="position:relative ;background-color: #fcecec;">
+      <div class="row">
+          <div class="col-md-6 bg-cover" style="position: absolute;top: 0;bottom:0;
+          background-image: url(http://topic.visitbeijing.com.cn/site/2018/S/scenic/images/0.png);">
+          
+          </div>
+      </div>
+      <div class="container" >
+          <div class="row justify-content-end">
+              <!-- 在Flex-Justify content可将文字往右移 -->
+              <div class="col-md-7.1">
+                  <br>
+                  <h2 style="color: rgb(187, 100, 60);">周边文化资讯</h2>
+                  <p>
+                    <li class="text-secondary">京郊民宿：桃花元舍</li><p></p>
+                    <li class="text-secondary">冬奥签约酒店伸出就业橄榄枝</li><p></p>
+                    <li class="text-secondary">北京东方君悦大酒店长安壹号主厨推鉴夏季食谱：夏日食光 赏味长安</li><p></p>
+                    <li class="text-secondary">来北京梧桐居民宿，感受山水之美</li><p></p>
+                    <li class="text-secondary">北京华尔道夫羿庭爵士之夜</li><p></p>
+                    <li class="text-secondary">酒店品牌焕新 巨头开打存量市场大战</li><p></p>
+                  </p>
+                  <a href="详情页.html" class="btn btn-outline-secondary col-4" style="color: rgb(66, 46, 19);">查看更多</a>
+                  <p></p><p></p>
+
+              </div>
+          </div>
+      </div>
+    </section>
+
+    <section class="py-8 col-16"  style="background-color: #f8f7ea; height:420px">
+      <div class="container">
+          <h2 class="text-center" style="color: rgb(153, 110, 53);"><br>每月去哪玩</h2><br>
+          <!-- 可以将文字进行调整class="text-center my-3" -->
+          <div class="row">
+            <div class="col-md-3">
+                  <div class="d-flex">
+                      <!-- 在说明找到Flex使用d-flex转换Icon变成可大小物件 -->
+                      <div class="mr-3">
+                        <img src="http://r1.visitbeijing.com.cn/images/20200520094655/985656aca149477f26b1c9cfca80254c.png">
+                      </div>
+                  </div>
+            </div>           
+             
+            <div class="col-md-3">
+                  <div class="d-flex">
+                          <!-- 在说明找到Flex使用d-flex转换Icon变成可大小物件 -->
+                    <div class="mr-3">
+                    <img src="http://r1.visitbeijing.com.cn/images/20200520094739/c4a30d3ea23a9764cebf302b9dfab583.png">
+                    </div>
+                          <!-- 透过Layout下方Media boject使用mr-3调整 -->
+                </div>
+            </div>  
+            <div class="col-md-3">
+                <div class="d-flex">
+                        <!-- 在说明找到Flex使用d-flex转换Icon变成可大小物件 -->
+                  <div class="mr-3">
+                      <img src="http://r1.visitbeijing.com.cn/images/20200520094827/cec7ef582c2af58785ae227a43112492.png">
+                  </div>
+                        <!-- 透过Layout下方Media boject使用mr-3调整 -->
+                </div>
+          </div> 
+
+          <div class="col-md-3">
+            <div class="d-flex">
+                <!-- 在说明找到Flex使用d-flex转换Icon变成可大小物件 -->
+                <div class="mr-3">
+                  <img src="http://r1.visitbeijing.com.cn/images/20200520094920/cfd4029c384a0f044ac18f6ae365fcb3.png">
+                </div>
+            </div>
+          </div>
+          
+      </div>  
+          
+
+    </section>
+        
+    <!-- 在说明档案文件Typography里面的Description list alignment有类似的模板 -->
+    
+    <section class="py-5" style="background-color: #faf0f0;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                  <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+                    <html xmlns="http://www.w3.org/1999/xhtml">
+                    <head>
+                    <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+                    <meta name="keywords" content="百度地图,百度地图API，百度地图自定义工具，百度地图所见即所得工具" />
+                    <meta name="description" content="百度地图API自定义地图，帮助用户在可视化操作下生成百度地图" />
+                    <title>百度地图API自定义地图</title>
+                    <!--引用百度地图API-->
+                    <style type="text/css">
+                        html,body{margin:0;padding:0;}
+                    .iw_poi_title {color:#CC5522;font-size:14px;font-weight:bold;overflow:hidden;padding-right:13px;white-space:nowrap}
+                    .iw_poi_content {font:12px arial,sans-serif;overflow:visible;padding-top:4px;white-space:-moz-pre-wrap;word-wrap:break-word}
+                    </style>
+                    <script type="text/javascript" src="http://api.map.baidu.com/api?key=&v=1.1&services=true"></script>
+                    </head>
+
+                    <body>
+                      <!--百度地图容器-->
+                      <div style="width:697px;height:550px;border:#ccc solid 1px;" id="dituContent"></div>
+                    </body>
+                    <script type="text/javascript">
+                        //创建和初始化地图函数：
+                        function initMap(){
+                            createMap();//创建地图
+                            setMapEvent();//设置地图事件
+                            addMapControl();//向地图添加控件
+                        }
+                        
+                        //创建地图函数：
+                        function createMap(){
+                            var map = new BMap.Map("dituContent");//在百度地图容器中创建一个地图
+                            var point = new BMap.Point(116.413387,39.910924);//定义一个中心点坐标
+                            map.centerAndZoom(point,12);//设定地图的中心点和坐标并将地图显示在地图容器中
+                            window.map = map;//将map变量存储在全局
+                        }
+                        
+                        //地图事件设置函数：
+                        function setMapEvent(){
+                            map.enableDragging();//启用地图拖拽事件，默认启用(可不写)
+                            map.enableScrollWheelZoom();//启用地图滚轮放大缩小
+                            map.enableDoubleClickZoom();//启用鼠标双击放大，默认启用(可不写)
+                            map.enableKeyboard();//启用键盘上下左右键移动地图
+                        }
+                        
+                        //地图控件添加函数：
+                        function addMapControl(){
+                            //向地图中添加缩放控件
+                      var ctrl_nav = new BMap.NavigationControl({anchor:BMAP_ANCHOR_TOP_LEFT,type:BMAP_NAVIGATION_CONTROL_LARGE});
+                      map.addControl(ctrl_nav);
+                            //向地图中添加缩略图控件
+                      var ctrl_ove = new BMap.OverviewMapControl({anchor:BMAP_ANCHOR_BOTTOM_RIGHT,isOpen:1});
+                      map.addControl(ctrl_ove);
+                            //向地图中添加比例尺控件
+                      var ctrl_sca = new BMap.ScaleControl({anchor:BMAP_ANCHOR_BOTTOM_LEFT});
+                      map.addControl(ctrl_sca);
+                        }
+                        
+                        
+                        initMap();//创建和初始化地图
+                    </script>
+                    </html>
+              </div>
+                
+              <div class="col-md-3" style="float:right;">
+                    <form action="">
+                        <div class="form-group">
+                          <label for="username">地区</label>
+                          <input type="text" class="form-control" id="username"  placeholder="请输入地区" required>
+                        </div>
+                        <div class="form-group">
+                          <label for="tel">景点</label>
+                          <input type="tel" class="form-control" id="tel" placeholder="请输入景点">
+                        </div>
+        
+                        <div class="form-group">
+                            <label for="Number">输入人数</label>
+                            <input type="number" class="form-control" id="Number" placeholder="请输入人数">
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                            <label class="form-check-label" for="exampleRadios1">
+                                工作日
+                            </label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+                            <label class="form-check-label" for="exampleRadios2">
+                               节假日
+                            </label>
+                          </div>
+                          <br>
+                          <div class="text-right">                            
+                            <button type="button"class="btn btn-secondary">取消</button>
+                            <button type="submit"class="btn btn-primary">确定</button>
+                          </div>
+                </div>
+            </div>
+        </div>
+    </section>
+        
+
+
+
+
+
+        
+
+        
+        
+
+ 
+        
+    </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+        </a>
+    </div>
+
+    
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" 
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" 
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" 
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" 
+        crossorigin="anonymous"></script>
+  </body>
+</html>
+<!-- style="background-color: #ebedf3" -->

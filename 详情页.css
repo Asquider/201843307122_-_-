@@ -1,0 +1,42 @@
+body{
+    background: url(http://topic.visitbeijing.com.cn/site/2018/S/scenic/images/1.png)  center center no-repeat;
+    height: 589px;
+    position: relative;
+}
+.dropdown>button:focus {
+    box-shadow: 0 0 0 0rem !important;
+}
+
+.btn-cart {
+    background-color: transparent;
+    position: relative;
+}
+
+.dropdown .btn-cart .badge {
+    position: absolute;
+    top: -1px;
+    right: -1px;
+}
+
+.dropdown-menu-right {
+    right: 0px;
+    left: auto;
+}
+
+.jumbotron-bg {
+    background-image: url('http://topic.visitbeijing.com.cn/site/2018/S/scenic/images/0.png');
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    min-width: 1000px;
+    height: 778px;
+}
+
+.bg-lighter {
+    background-color: rgba(255, 255, 255, .65);
+}
+
+.box-shadow {
+    box-shadow: 0 3px 5px rgba(0, 0, 0, .16);
+    transition: box-shadow .3s;
+}

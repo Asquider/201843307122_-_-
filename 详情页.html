@@ -1,0 +1,531 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>详细介绍页</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"
+        integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/all.css">
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="js/all.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('#removeModal').on('show.bs.modal', function (event) {
+                var button = $(event.relatedTarget)
+                var title = button.data('title')
+                var modal = $(this)
+                modal.find('.modal-title').text('確認' + title)
+            })
+        });
+        (function () {
+            'use strict';
+            window.addEventListener('load', function () {
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                var forms = document.getElementsByClassName('needs-validation');
+        // Loop over them and prevent submission
+                var validation = Array.prototype.filter.call(forms, function (form) {
+                    form.addEventListener('submit', function (event) {
+                        if (form.checkValidity() === false) {
+                            event.preventDefault();
+                            event.stopPropagation();
+                        }
+                        form.classList.add('was-validated');
+                    }, false);
+                });
+            }, false);
+        })();
+    </script>
+
+    <style>
+        body{
+            background: url(http://topic.visitbeijing.com.cn/site/2018/S/scenic/images/1.png)  center center no-repeat;
+            height: 589px;
+            position: relative;
+        }
+        .dropdown>button:focus {
+            box-shadow: 0 0 0 0rem !important;
+        }
+
+        .btn-cart {
+            background-color: transparent;
+            position: relative;
+        }
+
+        .dropdown .btn-cart .badge {
+            position: absolute;
+            top: -1px;
+            right: -1px;
+        }
+
+        .dropdown-menu-right {
+            right: 0px;
+            left: auto;
+        }
+
+        .jumbotron-bg {
+            background-image: url('http://topic.visitbeijing.com.cn/site/2018/S/scenic/images/0.png');
+            background-size: cover;
+            background-position: center center;
+            width: 100%;
+            min-width: 1000px;
+            height: 778px;
+        }
+
+        .bg-lighter {
+            background-color: rgba(255, 255, 255, .65);
+        }
+
+        .box-shadow {
+            box-shadow: 0 3px 5px rgba(0, 0, 0, .16);
+            transition: box-shadow .3s;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- https://getbootstrap.com/docs/4.0/components/jumbotron/(Fluid jumbotron) -->
+    <div class="jumbotron  jumbotron-bg ">
+        <!-- jumbotron-bg-css设定背景图 -->
+        <!-- d-flex align-items-end调整字的位置 -->
+        <!-- <div class="container bg-lighter">
+            <h1 class="display-4 font-weight-bold">买到剁手手!跳楼大拍卖</h1>
+            <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+        </div> -->
+    </div>
+    <!-- https://getbootstrap.com/docs/4.0/components/list-group/(Links and buttons) -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="list-group sticky-top">
+                    <!-- sticky-top https://getbootstrap.com/docs/4.0/utilities/position/ -->
+                    <a href="#pane-1" class="list-group-item list-group-item-action active" data-toggle="list">
+                      <i class="fas fa-atom republic mr-2"></i>游玩
+                    </a>
+                
+                    <a href="#pane-2" class="list-group-item list-group-item-action" data-toggle="list">
+                        <i class="fas fa-cocktail mr-2"></i>特产
+                    </a>
+                    <a href="#pane-3" class="list-group-item list-group-item-action"  data-toggle="list">
+                        <i class="fas fa-gift mr-2"></i>礼物
+                    </a>
+                    
+                  </div>
+
+                  <div class="mt-3">
+                    <p>
+                        <a href="首页.html" class="btn btn-outline-secondary col-4" style="color: rgb(66, 46, 19);">返回</a>
+                    </p>
+                </div>
+            </div>
+            <!-- https://getbootstrap.com/docs/4.0/components/list-group/#methods Methods$().tab -->
+            <div class="col-md-9">
+                <div class="tab-content">
+                    <!-- pane-1 -->
+                    <div class="tab-pane active" id="pane-1">
+                        <form class="form-inline my-2 my-lg-0">
+                            <input type="search" class="form-control col-md-4 col-9 rounded-0" placeholder="Search"
+                            aria-label="Search">
+                            <button class="btn btn-outline-warning my-2 my-sm-0 rounded-0" type="submit">Search</button>
+                        </form>
+                        <div class="row mt-2 mt-md-4 mb-4">
+                            <div class="col-md-4 mb-4">
+                                <div class="card box-shadow border-0 text-center h-100">
+                                    <!-- box-shadow阴影效果CSS -->
+                                    <!-- border-0移除线条 -->
+                                    <img class="card-img-top"
+                                    src="http://r1.visitbeijing.com.cn/images/43e398db8df13b5f80382515b0658f17.jpg" 
+                                    height="200px"
+                                    alt="Card image cap">
+                                    <div class="card-body">
+                                        <h5 class="card-title">天安门广场</h5>
+                                    </div>
+                                    <div class="card-footer border-top-0 bg-white">
+                                        <a href="购物车.html" class="btn btn-outline-secondary btn-block">购票</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4 mb-4">
+                                <div class="card box-shadow border-0 text-center h-100">
+                                    <img class="card-img-top"
+                                    src="http://r1.visitbeijing.com.cn/images/af83732b264c93b7a70acb1cbd315e01.jpg" 
+                                    height="200px"
+                                    alt="Card image cap">
+                                    <div class="card-body">
+                                        <h5 class="card-title">故宫</h5>
+                                        </p>
+                                    </div>
+                                    <div class="card-footer border-top-0 bg-white">
+                                        <a href="购物车.html" class="btn btn-outline-secondary btn-block">购票</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4 mb-4">
+                                <div class="card box-shadow border-0 text-center h-100">
+                                    <img class="card-img-top"
+                                    src="http://r1.visitbeijing.com.cn/images/96cf8522b91c104f059141a7b385ccea.jpg"
+                                    height="200px" 
+                                    alt="Card image cap">
+                                    <div class="card-body">
+                                        <h5 class="card-title">北海公园</h5>
+                                    </div>
+                                    <div class="card-footer border-top-0 bg-white">
+                                        <a href="购物车.html" class="btn btn-outline-secondary btn-block">购票</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4 mb-4">
+                                <div class="card box-shadow border-0 text-center h-100">
+                                    <img class="card-img-top"
+                                    src="http://r1.visitbeijing.com.cn/images/542b199ad5290c09efdc31a7d8af78ea.jpg"
+                                    height="200px"  
+                                    alt="Card image cap">
+                                    <div class="card-body">
+                                        <h5 class="card-title">八达岭长城</h5>
+                                        </p>
+                                    </div>
+                                    <div class="card-footer border-top-0 bg-white">
+                                        <a href="购物车.html" class="btn btn-outline-secondary btn-block">购票</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                          
+                          <div class="col-md-4 mb-4">
+                                <div class="card box-shadow border-0 text-center h-100">
+                                    <img class="card-img-top"
+                                    src="http://r1.visitbeijing.com.cn/images/e7257ddad8886bf1d6cae673e42ef836.jpg"
+                                    height="200px" 
+                                    height="200px" 
+                                    alt="Card image cap">
+                                    <div class="card-body">
+                                        <h5 class="card-title">颐和园</h5>
+                                    </div>
+                                    <div class="card-footer border-top-0 bg-white">
+                                        <a href="购物车.html" class="btn btn-outline-secondary btn-block">购票</a>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="col-md-4 mb-4">
+                                <div class="card box-shadow border-0 text-center h-100">
+                                    <img class="card-img-top"
+                                    src="http://r1.visitbeijing.com.cn/images/a547cc99ca216b13f9b86dc828cf1a84.jpg"
+                                    height="200px" 
+                                    height="200px" 
+                                    alt="Card image cap">
+                                    <div class="card-body">
+                                        <h5 class="card-title">圆明园</h5>
+                                    </div>
+                                    <div class="card-footer border-top-0 bg-white">
+                                        <a href="购物车.html" class="btn btn-outline-secondary btn-block">购票</a>
+                                    </div>
+                                </div>
+                            </div>
+                          
+                         </div>
+                      </div>
+                    
+
+
+                    <!-- pane-2 -->
+                    <div class="tab-pane" id="pane-2">
+                        <div class="row mt-2 mt-md-4 mb-4">
+                            <div class="col-md-4 mb-4">
+                                <div class="card box-shadow border-0 text-center h-100">
+                                    <!-- box-shadow阴影效果CSS -->
+                                    <!-- border-0移除线条 -->
+                                    <img class="card-img-top"
+                                    src="http://r1.visitbeijing.com.cn/images/ccf24dde4ab4c4021dace659b8befc63.jpg"
+                                    height="200px"
+                                    alt="Card image cap">
+                                    <div class="card-body">
+                                        <h5 class="card-title">筛羊肉</h5>
+                                    </div>
+                                    <div class="card-footer border-top-0 bg-white">
+                                        <a href="购物车.html" class="btn btn-outline-secondary btn-block">预订</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4 mb-4">
+                                <div class="card box-shadow border-0 text-center h-100">
+                                    <img class="card-img-top"
+                                    src="http://r1.visitbeijing.com.cn/images/f84e69b7e8e0d6def0dc887bba33dae1.jpg"
+                                    height="200px" 
+                                    alt="Card image cap">
+                                    <div class="card-body">
+                                        <h5 class="card-title">老北京烤鸭</h5>
+                                    </div>
+                                    <div class="card-footer border-top-0 bg-white">
+                                        <a href="购物车.html" class="btn btn-outline-secondary btn-block">预订</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4 mb-4">
+                                <div class="card box-shadow border-0 text-center h-100">
+                                    <img class="card-img-top"
+                                    src="http://r1.visitbeijing.com.cn/images/ce9bd64e4a03a221402352b1de6c3ef9.jpg"
+                                    height="200px" 
+                                    alt="Card image cap">
+                                    <div class="card-body">
+                                        <h5 class="card-title">卤煮火烧</h5>
+                                    </div>
+                                    <div class="card-footer border-top-0 bg-white">
+                                        <a href="购物车.html" class="btn btn-outline-secondary btn-block">预订</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4 mb-4">
+                                <div class="card box-shadow border-0 text-center h-100">
+                                    <img class="card-img-top"
+                                    src="http://r1.visitbeijing.com.cn/images/daa2f23139d97a4540d3a9d9f24e0d79.jpg"
+                                    height="200px" 
+                                    alt="Card image cap">
+                                    <div class="card-body">
+                                        <h5 class="card-title">豆汁浇圈</h5>
+                                    </div>
+                                    <div class="card-footer border-top-0 bg-white">
+                                        <a href="购物车.html" class="btn btn-outline-secondary btn-block">预订</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                          
+                          <div class="col-md-4 mb-4">
+                                <div class="card box-shadow border-0 text-center h-100">
+                                    <img class="card-img-top"
+                                    src="http://r1.visitbeijing.com.cn/images/819fcc4f41fcf2cde6b18dd70135e36a.jpg"
+                                    height="200px" 
+                                    alt="Card image cap">
+                                    <div class="card-body">
+                                        <h5 class="card-title">鲈鱼</h5>
+                                    </div>
+                                    <div class="card-footer border-top-0 bg-white">
+                                        <a href="购物车.html" class="btn btn-outline-secondary btn-block">预订</a>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="col-md-4 mb-4">
+                                <div class="card box-shadow border-0 text-center h-100">
+                                    <img class="card-img-top"
+                                    src="http://r1.visitbeijing.com.cn/images/00f86ce8de96f79a20b37326777c3dc0.jpg"
+                                    height="200px" 
+                                    alt="Card image cap">
+                                    <div class="card-body">
+                                        <h5 class="card-title">炙子烤肉</h5>
+                                    </div>
+                                    <div class="card-footer border-top-0 bg-white">
+                                        <a href="购物车.html" class="btn btn-outline-secondary btn-block">预订</a>
+                                    </div>
+                                </div>
+                            </div>
+                          
+                         </div>
+                      </div>
+
+
+                      <!-- pane-3 -->
+                      <div class="tab-pane" id="pane-3">
+                        <div class="row mb-4">
+                            <div class="col-md-4 mb-4">
+                                <div class="card box-shadow border-0 text-center h-100">
+                                    <img class="card-img-top"
+                                    src="http://r1.visitbeijing.com.cn/images/d4d3d08f4d4ec65d8734b88da267ac13.jpg" 
+                                    height="250px"
+                                    alt="Card image cap">
+                                    <div class="card-body">
+                                        <h5 class="card-title">工艺品</h5>
+                                    </div>
+                                    <div class="card-footer border-top-0 bg-white">
+                                        <a href="购物车.html" class="btn btn-outline-secondary btn-block">订购</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4 mb-4">
+                                <div class="card box-shadow border-0 text-center h-100">
+                                    <img class="card-img-top"
+                                    src="http://r1.visitbeijing.com.cn/images/f03c08e445446ea67fd13091062e4ee8.jpg" 
+                                    height="250px"
+                                    alt="Card image cap">
+                                    <div class="card-body">
+                                        <h5 class="card-title">北京礼物</h5>
+                                    </div>
+                                    <div class="card-footer border-top-0 bg-white">
+                                        <a href="购物车.html" class="btn btn-outline-secondary btn-block">订购</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4 mb-4">
+                                <div class="card box-shadow border-0 text-center h-100">
+                                    <img class="card-img-top"
+                                    src="http://r1.visitbeijing.com.cn/images/62c987de400359e054bc82c65aacbf9c.jpg" 
+                                    height="250px"
+                                    alt="Card image cap">
+                                    <div class="card-body">
+                                        <h5 class="card-title">京城服饰</h5>
+                                    </div>
+                                    <div class="card-footer border-top-0 bg-white">
+                                        <a href="购物车.html" class="btn btn-outline-secondary btn-block">订购</a>
+                                    </div>
+                                </div>
+                            </div>
+                               
+                        </div>
+                     </div>
+
+
+                </div>
+            </div>
+        </div>
+
+        <nav aria-label="Page navigation example">
+            <ul class="pagination d-flex justify-content-center mb-5">
+                <li class="page-item"><a href="#pane-2" class="page-link">Previous</a></li>
+                <li class="page-item"><a href="#pane-1" class="page-link">1</a></li>
+                <li class="page-item"><a href="#pane-2" class="page-link">2</a></li>
+                <li class="page-item"><a href="#pane-3" class="page-link">3</a></li>
+                <li class="page-item"><a href="#pane-2" class="page-link">Next</a></li>
+            </ul>
+        </nav>
+
+    </div>
+    <!-- 商品页面 -->
+    <div class="container">
+        <!-- https://getbootstrap.com/docs/4.0/components/breadcrumb/ -->
+        <!-- bg-transparent可以移除背景颜色 -->
+        <nav aria-label="breadcrumb"></nav>
+            <ol class="breadcrumb bg-transparent pl-0">
+                <li class="breadcrumb-item"><a href="首页.html">首页</a></li>
+                <li class="breadcrumb-item"><a href="详情页.html">景区</a></li>
+                <li class="breadcrumb-item active" aria-current="page">线路推荐</li>
+            </ol>
+        </nav>
+        <div class="row">
+            <div class="col-md-4">
+                <!-- sticky-top固定 -->
+                <div class="sticky-top" style="top:10px">
+                    <div class="d-flex">
+                        <h1 class="h2" style="color: rgb(253, 164, 31);">红色旅游线路</h1>
+                        <span class="h4  pt-2 ml-2" style="color: rgb(235, 180, 99);">(推荐)</span>
+                    </div>
+                    <!-- justify-content-end align-items-end 预售价可以靠右并且放在底部 -->
+                    <div class="d-flex justify-content-end align-items-end">
+                        <del class="text-muted">平日价￥1299</del>
+                        <!-- h3样式大文字ml-auto会有弹性的伸缩 mb-0对应在同一底线，text-danger强调文字颜色为红色 -->
+                        <div class="h3 ml-auto mb-0 text-danger">
+                            <small>国庆价 ￥</small>
+                            <strong>520</strong>
+                        </div>
+                    </div>
+
+                    <hr> 
+                    <!-- https://getbootstrap.com/docs/4.0/components/buttons/ -->
+                    <div class="btn-group btn-group-sm btn-group-toggle" data-toggle="buttons">
+                        <label class="btn btn-outline-secondary active">
+                            <input type="radio" name="options" id="option1" autocomplete="off" checked> 单人游
+                        </label>
+                        <label class="btn btn-outline-secondary">
+                            <input type="radio" name="options" id="option2" autocomplete="off" checked> 组团游
+                        </label>
+                    </div>
+                    <!-- https://getbootstrap.com/docs/4.0/components/input-group/ -->
+                    <div class="input-group mt-3">
+                        <select name="" id="number" class="form-control mr-1">
+                            <option value="1">线路1</option>
+                            <option value="2">线路2</option>
+                            <option value="3">线路3</option>
+                        </select>
+                        <a href="购物车.html" class="btn btn-primary" >加入购物车</a>
+                    </div>
+                    <div class="mt-3">
+                        <p>
+                            <a href="后台.html" class="btn btn-outline-secondary col-4" style="color: rgb(66, 46, 19);">查看更多</a>
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col-md-8">
+                <h3 class="text-center" style="color: rgb(85, 51, 45);">线路一: 新中国"进京赶考"之旅</h3>
+                <p>
+                <img src="https://m1-1253159997.image.myqcloud.com/cs1806_ztb/2021/6/18/086ee1996ec61e73c06d0fe60be0e86c.jpg" target="_blank" class="w-100" alt="">
+                <br><br><p></p>
+                <h3 class="text-center mt-3" style="color: rgb(85, 51, 45);">线路二: 中国共产党早期革命之旅</h3>
+                <p>
+                <img src="https://m1-1253159997.image.myqcloud.com/cs1806_ztb/2021/6/18/0078a3f02a245a047591a91cf164db05.jpg" class="w-100" alt="">
+                <br><br><p></p>
+                <h3 class="text-center" >线路三: “新文化和五四运动”发祥之旅</h3>
+                <p>
+                <img src="https://m1-1253159997.image.myqcloud.com/cs1806_ztb/2021/6/18/d96c40fd66e7b8e4493f7432b43a47d9.jpg" class="w-100" alt="">
+                <br><br><br>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+    </div>
+
+ 
+
+
+
+
+
+
+
+     <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+    <script src="js/all.js"></script>
+
+</body>
+
+</html>
+
+
+
+
+
+
